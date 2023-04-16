@@ -1,0 +1,19 @@
+action - plain javascript object that we send to the store to trigger some modification of the store state.
+       - they are couple of action types, e.g a command that we send to the store,
+       - actions are more often an event, reporting something that has happened at the level of the Component
+
+
+reducer - plain javascript function that takes a state and action as the argument ands returns the new State of the store
+        - it calculates a new version of the state based on the previous state and the action that got dispatched.
+
+
+
+
+selector - if a reactive meomized function - keeps memory of previous executions
+         - only executes itself if the inputs of the function have not been calculated before
+         - in summary, it's a mapping function with memory 
+
+effects - an effect executes after an action has been dispatched and processed by the store
+        - something that is done in response to a given action 
+        - if an action is dispatched and the reducer is triggered, the side effect runs
+        - 
